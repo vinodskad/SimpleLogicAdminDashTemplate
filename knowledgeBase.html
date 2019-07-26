@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Simple Logic Admin Template</title> 
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">    
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/select.css"/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select.js"></script>
+    
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	
+	</style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="images/logo.png"/></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">Knowledge Base</a></li>
+            <li><a href="#">Reports</a></li>
+			<li><a href="#">Administartion</a></li>
+          </ul>
+          <!-- <form class="navbar-form pull-left">
+              <div class="input-group">
+                  <input type="text" class="form-control serchinput" placeholder="Search">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+          </form> -->
+		  <ul class="nav navbar-nav navbar-right">
+            <li><a class="liaNoPadd" href="#"><span class="badge badge-light ticketbdg">New Ticket</span></a></li>
+            <li class="toggleLi">
+              <div class="btn-group btn-toggle"> 
+                 <button class="btn btn-sm btn-default">IN</button>
+                 <button class="btn btn-sm btn-primary active">OUT</button>
+              </div>
+           </li>
+           <li class="dropdown">
+              <a class="dropdown-toggle userLiA" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Logout</a></li>
+                <li><a href="#">Profile</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span class="badge nitify">7</span><i class="fa fa-fax" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="fixedheader">
+        <div class="left-sidebar">
+          <ul class="sideUl">
+            <li><div class="usericon">JS</div><div class="liveStatus"></div></li>
+            <li><div class="usericon">JS</div><div class="liveStatus"></div></li>
+            <li><div class="usericon">JS</div><div class="liveStatus"></div></li>
+          </ul>
+        </div>
+        <div class="col-sm-2 col-md-2 sidebar">
+          <div class="clicknav"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+          <ul class="nav nav-sidebar">
+              <li class=""><a href="#">Status
+                <button type="button" class="btn btn-primary pull-right statusBtn1">
+                    <span class="badge badge-light bdg"></span>Open 
+                  <span class="sr-only">unread messages</span>
+                </button></a></li>
+              <li><a href="#">Priority
+                <button type="button" class="btn btn-primary pull-right statusBtn2">
+                    <span class="badge badge-light bdg"></span> P3
+                  <span class="sr-only">unread messages</span>
+                </button></a></li>
+              <li>
+                  <a href="#" data-toggle="collapse" data-target="#submenu-1">Group <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                  <ul id="submenu-1" class="collapse">
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.1</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.2</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.3</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#" data-toggle="collapse" data-target="#submenu-2">Agent <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                  <ul id="submenu-2" class="collapse">
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.1</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.2</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
+                  </ul>
+              </li>  
+            </ul>
+             <label class="width100">Ticket Information </label>  
+             <ul class="nav nav-sidebar">     
+              <li>
+                  <a href="#" data-toggle="collapse" data-target="#submenu-3">Category <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                  <ul id="submenu-3" class="collapse">
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.1</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.2</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.3</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#" data-toggle="collapse" data-target="#submenu-3">Sub Category <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                  <ul id="submenu-3" class="collapse">
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.1</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.2</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
+                  </ul>
+              </li>  
+              <li>
+                  <a href="#" data-toggle="collapse" data-target="#submenu-5">Source <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                  <ul id="submenu-5" class="collapse">
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.1</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.2</a></li>
+                      <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
+                  </ul>
+              </li>  
+          </ul>         
+        </div>
+      </div>
+        <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+          <h4 class="col-sm-6 nopadding">How can we help you today ?</h4>
+          <div class="clearfix"></div>
+          <div class="col-xs-9 nopadding">
+            <div class="input-group">               
+                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+              </div>
+          </div>
+          <div class="col-xs-3 text-center">
+              <button type="button" class="btn btn-default">Filter <i class="fa fa-filter" aria-hidden="true"></i></button>
+          </div>
+          <div class="col-sm-12 nopadding"><h5><a>Top Help Articles</a></h5></div>
+          <div class="col-sm-6 whitebg padding5">
+            <ul class="list-group" id="contact-list">
+                <li class="list-group-item listactive">
+                    <div class="col-sm-1 col-xs-1 nopadding">
+                        <img src="http://api.randomuser.me/portraits/men/49.jpg" alt="Scott Stevens" class="img-responsive img-circle" />
+                    </div>
+                    <div class="col-sm-9 col-xs-9">                        
+                        <h5><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;<b>Adding the custom tag in the < head ></b></h5>
+                        <label class="colGray">posted by<b>Pau Voildes</b> upadted 1 weeks ago &nbsp;&nbsp; <i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;2</label>
+                    </div>
+                    <div class="col-sm-2 col-xs-2 nopadding top10 text-right">
+                        <span class="fa fa-star-o mobbtm font24" aria-hidden="true"></span> <span class="label label-success">+1</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-sm-1 col-xs-1 nopadding">
+                        <img src="http://api.randomuser.me/portraits/men/97.jpg" alt="Seth Frazier" class="img-responsive img-circle" />
+                    </div>
+                    <div class="col-sm-9 col-xs-9">                        
+                        <h5><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;<b>Adding the custom tag in the < head ></b></h5>
+                        <label class="colGray">posted by<b>Pau Voildes</b> upadted 1 weeks ago &nbsp;&nbsp; <i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;2</label>
+                    </div>
+                    <div class="col-sm-2 col-xs-2 nopadding top10 text-right">
+                        <span class="fa fa-star-o mobbtm font24" aria-hidden="true"></span> <span class="label label-success">+1</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-sm-1 col-xs-1 nopadding">
+                        <img src="http://api.randomuser.me/portraits/women/90.jpg" alt="Jean Myers" class="img-responsive img-circle" />
+                    </div>
+                    <div class="col-sm-9 col-xs-9">                        
+                        <h5><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;<b>Adding the custom tag in the < head ></b></h5>
+                        <label class="colGray">posted by<b>Pau Voildes</b> upadted 1 weeks ago &nbsp;&nbsp; <i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;2</label>
+                    </div>
+                    <div class="col-sm-2 col-xs-2 nopadding top10 text-right">
+                        <span class="fa fa-star-o  mobbtm orange font24" aria-hidden="true"></span> <span class="label label-success">+1</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-sm-1 col-xs-1 nopadding">
+                        <img src="http://api.randomuser.me/portraits/men/24.jpg" alt="Todd Shelton" class="img-responsive img-circle" />
+                    </div>
+                    <div class="col-sm-9 col-xs-9">                        
+                        <h5><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;<b>Adding the custom tag in the < head ></b></h5>
+                        <label class="colGray">posted by<b>Pau Voildes</b> upadted 1 weeks ago &nbsp;&nbsp; <i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;2</label>
+                    </div>
+                    <div class="col-sm-2 col-xs-2 nopadding top10 text-right">
+                        <span class="fa fa-star-o mobbtm font24 orange" aria-hidden="true"></span> <span class="label label-danger">+1</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-sm-1 col-xs-1 nopadding">
+                        <img src="http://api.randomuser.me/portraits/women/34.jpg" alt="Rosemary Porter" class="img-responsive img-circle" />
+                    </div>
+                    <div class="col-sm-9 col-xs-9">                        
+                        <h5><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;<b>Adding the custom tag in the < head ></b></h5>
+                        <label class="colGray">posted by<b>Pau Voildes</b> upadted 1 weeks ago &nbsp;&nbsp; <i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;2</label>
+                    </div>
+                    <div class="col-sm-2 col-xs-2 nopadding top10 text-right">
+                        <span class="fa fa-star-o mobbtm font24" aria-hidden="true"></span> <span class="label label-success">+1</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-sm-1 col-xs-1 nopadding">
+                        <img src="http://api.randomuser.me/portraits/women/56.jpg" alt="Debbie Schmidt" class="img-responsive img-circle" />
+                    </div>
+                    <div class="col-sm-9 col-xs-9">                        
+                        <h5><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;<b>Adding the custom tag in the < head ></b></h5>
+                        <label class="colGray">posted by<b>Pau Voildes</b> upadted 1 weeks ago &nbsp;&nbsp; <i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;2</label>
+                    </div>
+                    <div class="col-sm-2 col-xs-2 nopadding top10 text-right">
+                        <span class="fa fa-star-o font24 orange" aria-hidden="true"></span> <span class="label label-danger">+1</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>         
+            
+            <div class="clearfix"></div>                
+          </div>
+
+          <div class="col-sm-6 whitebg mobNoPad padding5">
+            <div class="listcard topbrdblue">
+                <a>General</a> &nbsp; &nbsp; &nbsp;<label><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;Question</label>
+                <div class="clearfix"></div>
+                <div class="col-sm-1 col-xs-1 nopadding">
+                    <img src="http://api.randomuser.me/portraits/women/56.jpg" alt="Debbie Schmidt" class="img-responsive img-circle" />
+                </div>
+                <div class="col-sm-10 col-xs-10">                        
+                    <h5 class="colsky"><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;<b>Adding the custom tag in the < head ></b></h5>
+                    <label class="colGray">posted by<b>Pau Voildes</b> upadted 1 weeks ago &nbsp;&nbsp; <i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;2</label>
+                </div>
+                <div class="clearfix"></div>
+                <p class="top10">Dear Userecho team,<br/>
+                    Is there a posibillity to do that ? Is just validate the domain with webmastertools or analytics for the inboundmarketing email</p>
+                <div class="clearfix"></div>
+                <hr/>
+                <label><b>Vote</b></label> 
+                <button type="button" class="btn btn-default">0 <i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-default">0 <i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-warning pull-right">Reply</button>
+            </div>
+            <div class="listcard">
+                <h4><b><i class="fa fa-thumbs-up" aria-hidden="true"></i> Answer</b></h4>
+                <div class="top10 col-xs-12"></div>
+                <div class="clearfix"></div>
+                <div class="col-sm-1 col-xs-1 nopadding">
+                    <img src="http://api.randomuser.me/portraits/women/56.jpg" alt="Debbie Schmidt" class="img-responsive img-circle" />
+                </div>
+               
+                <div class="col-sm-10 col-xs-10">                        
+                    <h5 class="colsky"><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;<b>Adding the custom tag in the < head ></b></h5>
+                    <label class="colGray">posted by<b>Pau Voildes</b> upadted 1 weeks ago &nbsp;&nbsp; <i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;2</label>
+                    <p>Dear Userecho team,<br/>
+                        Is there a posibillity to do that ? Is just validate the domain with webmastertools or analytics for the inboundmarketing email</p>
+                </div>
+                <div class="col-sm-1 col-xs-1 nopadding">
+                    <span class="label label-success">+1</span>
+                </div>
+                <div class="clearfix"></div>                
+            </div>
+            <div class="listcard">
+                <h4><b><i class="fa fa-thumbs-up" aria-hidden="true"></i> Answer</b></h4>
+                <div class="top10 col-xs-12"></div>
+                <div class="clearfix"></div>
+                <div class="col-sm-1 col-xs-1 nopadding">
+                    <img src="http://api.randomuser.me/portraits/women/56.jpg" alt="Debbie Schmidt" class="img-responsive img-circle" />
+                </div>
+               
+                <div class="col-sm-10 col-xs-10">                        
+                    <h5 class="colsky"><i class="fa fa-question-circle colSkyblue" aria-hidden="true"></i>&nbsp;&nbsp;<b>Adding the custom tag in the < head ></b></h5>
+                    <label class="colGray">posted by<b>Pau Voildes</b> upadted 1 weeks ago &nbsp;&nbsp; <i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;2</label>
+                    <p>Dear Userecho team,<br/>
+                        Is there a posibillity to do that ? Is just validate the domain with webmastertools or analytics for the inboundmarketing email</p>
+                </div>
+                <div class="col-sm-1 col-xs-1 nopadding">
+                    <span class="fa fa-trash-o font24 colGray trash"></span><br/><br/>
+                    <span class="label label-success">+1</span>
+                </div>
+                <div class="clearfix"></div>                
+            </div>
+            <div class="listcard">
+                <div class="col-sm-12 col-xs-12 nopadding">                        
+                        <h4><b>Replies</b></h4>
+                        <textarea class="form-control"></textarea>
+                </div>  
+                <div class="clearfix"></div>              
+            </div>
+          </div>       
+        </div>
+      </div>
+    </div>    
+  </body>
+  <script>
+  $(document).ready(function() {
+    
+    $('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active');  
+    
+    if ($(this).find('.btn-primary').length>0) {
+    	$(this).find('.btn').toggleClass('btn-primary');
+    }   
+    $(this).find('.btn').toggleClass('btn-default');
+       
+});
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+    });
+  $(".clicknav").click(function(){
+    $(".fixedheader").toggleClass("fixedheaderout");
+  }); 
+} );
+</script>
+</html>

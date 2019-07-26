@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Simple Logic Admin Template</title> 
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">    
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css"/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+   
+    <script type="text/javascript" src="js/jquery.canvasjs.min.js"></script> 
+<script src="js/chart2.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	
+	</style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="images/logo.png"/></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">Knowledge Base</a></li>
+            <li><a href="#">Reports</a></li>
+			<li><a href="#">Administartion</a></li>
+          </ul>
+          <!-- <form class="navbar-form pull-left">
+              <div class="input-group">
+                  <input type="text" class="form-control serchinput" placeholder="Search">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+          </form> -->
+		  <ul class="nav navbar-nav navbar-right">
+            <li><a class="liaNoPadd" href="#"><span class="badge badge-light ticketbdg">New Ticket</span></a></li>
+            <li class="toggleLi">
+              <div class="btn-group btn-toggle"> 
+                 <button class="btn btn-sm btn-default">IN</button>
+                 <button class="btn btn-sm btn-primary active">OUT</button>
+              </div>
+           </li>
+           <li class="dropdown">
+              <a class="dropdown-toggle userLiA" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Logout</a></li>
+                <li><a href="#">Profile</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span class="badge nitify">7</span><i class="fa fa-fax" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+          <div class="fixedheader">
+        <div class="left-sidebar">
+          <ul class="sideUl">
+            <li><div class="usericon">JS</div><div class="liveStatus"></div></li>
+            <li><div class="usericon">JS</div><div class="liveStatus"></div></li>
+            <li><div class="usericon">JS</div><div class="liveStatus"></div></li>
+          </ul>
+        </div>
+        <div class="col-sm-2 col-md-2 sidebar">
+            <div class="clicknav"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+          <ul class="nav nav-sidebar">
+              <li class="active"><a href="#">Overview</a></li>               
+          </ul>   
+          <ul class="nav nav-sidebar">
+                <li class=""><a href="#">Group Analysis</a></li>               
+          </ul> 
+          <ul class="nav nav-sidebar">
+                <li class=""><a href="#">User Analysis</a></li>               
+          </ul>     
+          <ul class="nav nav-sidebar">
+                  <li class=""><a href="#">Reports</a></li>               
+          </ul>   
+        </div>
+          </div>
+        <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header col-sm-6"><i class="fa fa-circle-thin font24 mrgright colGray" aria-hidden="true"></i>Dashbord</h1>
+          <div class="clearfix"></div>
+          <div class="col-sm-12 bggray dashpad">
+              <div class="col-sm-2"><h5><b>Current Ticket Status</b></h5></div>
+              <div class="col-sm-2"><h2 class="colsky">609<span class="smallspan">Open</span></h2></div>
+              <div class="col-sm-2 nopadding"><h2 class="colgold">200<span class="smallspan">Approching Deadline</span></h2></div>
+              <div class="col-sm-2"><h2 class="colpink">571<span class="smallspan">Overdue</span></h2></div>
+              <div class="col-sm-2"><h2 class="colgry">571<span class="smallspan">Unassigned</span></h2></div>
+              <div class="col-sm-2"  > 
+                <select class="form-control fillterinp" >
+                    <option>Last 7 days</option>
+                </select>
+              </div>
+            <div class="clearfix"></div>
+              <div class="col-sm-12 whitebg">
+                    <div id="bar-chart" style="height: 300px; width: 100%;"></div>
+             
+              <!-- <div class="col-sm-4">
+                  <div class="statuscard">
+                      <label class="topleft">1190</label>
+                      <label class="topright"><i class="fa fa-check-circle-o" aria-hidden="true"></i></label>
+                      <label class="bottomleft">New Tickets(Total)</label>
+                      <label class="bottomright"><i class="fa fa-line-chart" aria-hidden="true"></i></label>
+                  </div>
+              </div> -->
+            </div>
+          </div>             
+        </div>
+      </div>
+    </div>    
+  </body>
+  <script>
+  $(document).ready(function() {
+    
+    $('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active');  
+    
+    if ($(this).find('.btn-primary').length>0) {
+    	$(this).find('.btn').toggleClass('btn-primary');
+    }   
+    $(this).find('.btn').toggleClass('btn-default');
+       
+});
+
+$(".clicknav").click(function(){
+    $(".fixedheader").toggleClass("fixedheaderout");
+  });
+} );
+</script>
+
+</html>
